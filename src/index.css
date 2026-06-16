@@ -21,12 +21,9 @@ body, html, #root {
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
 }
-
-/* App root container for layout spacing */
 .app-root { min-height: 100vh; padding: 2.5rem; }
 .app-container { max-width: 1200px; margin: 0 auto; }
 
-/* Card style used across components */
 .card {
   border-radius: var(--radius-lg);
   background: var(--color-card-bg);
@@ -35,13 +32,11 @@ body, html, #root {
 }
 .card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(34, 30, 24, 0.12); }
 
-/* Sidebar enhancements */
 .sidebar { background: linear-gradient(180deg, #2D2418 0%, #1F1914 100%); }
 .sidebar h1 { color: var(--color-gold-primary); }
 .sidebar-link { display: flex; align-items: center; justify-content: flex-end; gap: .75rem; color: #fff; padding: .85rem 1rem; border-radius: 0.5rem; transition: background 150ms, color 150ms; }
 .sidebar-link:hover { background: rgba(212,175,55,0.12); color: #111827; }
 
-/* Utility fallbacks for legacy/custom class names used in JSX */
 .bg-card-bg { background-color: var(--color-card-bg); }
 .bg-bg-dark { background-color: var(--color-bg-dark); }
 .text-gold-primary { color: var(--color-gold-primary); }
@@ -54,13 +49,11 @@ body, html, #root {
 .hover\:bg-gold-dark:hover { background-color: var(--color-gold-dark); }
 .hover\:bg-gold-primary:hover { background-color: var(--color-gold-primary); }
 
-/* Small responsive tweaks */
 @media (max-width: 768px) {
   .app-root { padding: 1rem; }
   .app-container { padding: 0 1rem; }
 }
 
-/* Ensure main content is offset from fixed sidebar on wider screens */
 @media (min-width: 768px) {
   .app-container { margin-left: 280px; }
   .sidebar { z-index: 40; }
