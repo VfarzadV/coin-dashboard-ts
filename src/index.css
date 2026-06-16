@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --color-gold-primary: #D4AF37;   /* طلایی اصلی */
+  --color-gold-dark: #F5B041;      /* طلایی تیره‌تر برای hover */
+  --color-gold-dim: #E8DCC8;       /* طلایی کمرنگ برای حاشیه‌ها */
+  --color-bg-dark: #FBF7F3;        /* پس‌زمینه اصلی روشن */
+  --color-card-bg: #FFFFFF;        /* پس‌زمینه کارت‌ها سفید */
+  --color-text-primary: #2D2418;   /* متن اصلی */
+  --color-text-secondary: #6B5A4A; /* متن ثانویه */
+  --radius-lg: 1rem;
+}
+
+body, html, #root {
+  font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #FEF9F3 0%, #F8F6F2 50%, #F3EFEA 100%);
+  color: var(--color-text-primary);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* App root container for layout spacing */
+.app-root { min-height: 100vh; padding: 2.5rem; }
+.app-container { max-width: 1200px; margin: 0 auto; }
+
+/* Card style used across components */
+.card {
+  border-radius: var(--radius-lg);
+  background: var(--color-card-bg);
+  box-shadow: 0 6px 18px rgba(34, 30, 24, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(34, 30, 24, 0.12); }
+
+/* Sidebar enhancements */
+.sidebar { background: linear-gradient(180deg, #2D2418 0%, #1F1914 100%); }
+.sidebar h1 { color: var(--color-gold-primary); }
+.sidebar-link { display: flex; align-items: center; justify-content: flex-end; gap: .75rem; color: #fff; padding: .85rem 1rem; border-radius: 0.5rem; transition: background 150ms, color 150ms; }
+.sidebar-link:hover { background: rgba(212,175,55,0.12); color: #111827; }
+
+/* Utility fallbacks for legacy/custom class names used in JSX */
+.bg-card-bg { background-color: var(--color-card-bg); }
+.bg-bg-dark { background-color: var(--color-bg-dark); }
+.text-gold-primary { color: var(--color-gold-primary); }
+.text-text-primary { color: var(--color-text-primary); }
+.text-text-secondary { color: var(--color-text-secondary); }
+.border-gold-primary { border-color: var(--color-gold-primary); }
+.border-gold-dim { border-color: var(--color-gold-dim); }
+.bg-gold-primary { background-color: var(--color-gold-primary); }
+.bg-gold-dark { background-color: var(--color-gold-dark); }
+.hover\:bg-gold-dark:hover { background-color: var(--color-gold-dark); }
+.hover\:bg-gold-primary:hover { background-color: var(--color-gold-primary); }
+
+/* Small responsive tweaks */
+@media (max-width: 768px) {
+  .app-root { padding: 1rem; }
+  .app-container { padding: 0 1rem; }
+}
+
+/* Ensure main content is offset from fixed sidebar on wider screens */
+@media (min-width: 768px) {
+  .app-container { margin-left: 280px; }
+  .sidebar { z-index: 40; }
+  .app-container { position: relative; z-index: 10; }
+}
