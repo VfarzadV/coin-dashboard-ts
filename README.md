@@ -59,12 +59,22 @@
 
 ## 📸 Screenshots
 
-> *(Add your screenshots here – replace the placeholders with actual images)*
-
-![Dashboard Light](./screenshots/dashboard-light.png)  
-![Dashboard Dark](./screenshots/dashboard-dark.png)
-
----
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><strong>Dashboard</strong></td>
+      <td align="center"><strong>Menu</strong></td>
+    </tr>
+    <tr>
+      <td><img src="./screenshots/Dashboard-f.jpg" alt="Dashboard desktop" width="400" /></td>
+      <td><img src="./screenshots/menu-f.jpg" alt="Menu desktop" width="400" /></td>
+    </tr>
+    <tr>
+      <td><img src="./screenshots/Dashboard-m.jpg" alt="Dashboard mobile" width="400" /></td>
+      <td><img src="./screenshots/menu-m.jpg" alt="Menu mobile" width="400" /></td>
+    </tr>
+  </table>
+</div>
 
 ## 🚀 Getting Started
 
